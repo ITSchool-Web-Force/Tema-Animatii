@@ -54,7 +54,7 @@ button {
     z-index: 2;
     box-shadow: 0.1ch 0.1ch 2ch rgb(48, 47, 47);
 }
-@media (min-width: 512px) {
+@media (min-width: 650px) {
     main {
         width: 60vw;
         overflow: visible;
