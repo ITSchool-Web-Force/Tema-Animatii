@@ -81,10 +81,6 @@ button {
 }
 @media (min-width:1000px) {
     main {
-        --margin: 5rem;
-        
-        margin-block: var(--margin);
-        min-height: calc(100vh - 2 * var(--margin));
         width: 55vw;
         overflow:hidden;
     }
