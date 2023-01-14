@@ -62,8 +62,8 @@ button {
     border-radius: 0.5rem;
     padding: 0.3rem 0.7rem;   
     animation-name: buton-jos;
-    animation-duration: 5s;
-    animation-delay: 4.5s;
+    animation-duration: 10s;
+    animation-delay: 4s;
     animation-direction: alternate-reverse;
     animation-play-state: running;
     animation-iteration-count: infinite;
@@ -111,6 +111,7 @@ button {
         width: 55vw;
     }
 }
+@media (min-width:1200px) {
 @keyframes close-button {
     0% {
         animation-timing-function: ease-out;
@@ -125,7 +126,7 @@ button {
         
     }
     100% {
-        animation-timing-function: ease-out;
+        animation-timing-function: ease-in-out;
         transform: translateX(0)translateY(0)rotate(0deg);
         background: radial-gradient(rgb(179, 5, 31),rgb(216, 216, 53));
     }
@@ -158,4 +159,5 @@ button {
         animation-timing-function: ease-in-out;
         color:red;
     }
+}
 }
