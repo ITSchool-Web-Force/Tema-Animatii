@@ -17,7 +17,7 @@ main {
     box-sizing: border-box;
     border-radius: 1rem;
     color:white;  
-    overflow:scroll;
+    overflow: scroll;
     inset-block: auto;
     position: sticky;
     margin-block: var(--margin);
@@ -62,8 +62,8 @@ button {
     z-index: 2;
     box-shadow: 0.1ch 0.1ch 2ch rgb(48, 47, 47);
     position: absolute;
-    inset-inline-end: -1rem;
-    inset-block-start: -1rem;
+    inset-inline-end: -1.5rem;
+    inset-block-start: -1.5rem;
 }
 @media (min-width: 650px) {
     h1 {
@@ -76,9 +76,7 @@ button {
         align-self: flex-end;
         background-color: #3D4450;
         padding: 0.7rem 1rem;
-        color:white;
-        
-        
+        color:white;        
     }
 }
 @media (min-width:1000px) {
@@ -88,6 +86,7 @@ button {
         margin-block: var(--margin);
         min-height: calc(100vh - 2 * var(--margin));
         width: 55vw;
+        overflow:hidden;
     }
    
 }
