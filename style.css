@@ -37,7 +37,6 @@ h1 {
     flex-direction: column;
     margin-inline: 1rem;
     padding-block-end: 1rem;
-    position: relative;
 }
 p {
     padding-block: 1rem;
