@@ -3,6 +3,8 @@
 }
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body {
     background-color: rgb(173, 177, 177);
@@ -69,18 +71,18 @@ button {
     border-block-end: 1px solid white;
 }
 @media (min-width: 450px) {
-    h1 {
-        font-size: 3rem;
-    }
-    button {
-        width: 8rem;
-        height: auto;
-        justify-content: flex-end;
-        align-self: flex-end;
-        background-color: #3D4450;
-        padding: 0.7rem 1rem;
-        color:white;        
-    }
+h1 {
+    font-size: 3rem;
+}
+button {
+    width: 8rem;
+    height: auto;
+    justify-content: flex-end;
+    align-self: flex-end;
+    background-color: #3D4450;
+    padding: 0.7rem 1rem;
+    color:white;        
+}
 }
 @media (min-width:1000px) {
     main {
