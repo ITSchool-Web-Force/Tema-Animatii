@@ -17,7 +17,6 @@ main {
     box-sizing: border-box;
     border-radius: 1rem;
     color:white;  
-    overflow: scroll;
     inset-block: auto;
     position: sticky;
     margin-block: var(--margin);
@@ -66,7 +65,7 @@ button {
     inset-inline-end: -1.5rem;
     inset-block-start: -1.5rem;
 }
-@media (min-width: 650px) {
+@media (min-width: 450px) {
     h1 {
         font-size: 3rem;
     }
@@ -83,7 +82,6 @@ button {
 @media (min-width:1000px) {
     main {
         width: 55vw;
-        overflow:hidden;
     }
    
 }
