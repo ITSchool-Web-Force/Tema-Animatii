@@ -16,7 +16,6 @@ main {
     height: auto;
     width: 80%;
     margin-inline: auto;
-    box-sizing: border-box;
     border-radius: 1rem;
     color:white;  
     inset-block: auto;
