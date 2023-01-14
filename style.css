@@ -31,6 +31,12 @@ h1 {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     border-block-end: 1px solid white;
+    transition: transform 5s, color 3s;
+}
+h1:hover {
+    transform: translate(3rem);
+    color: green;
+    border-block-end: none;
 }
 #container {
     display: flex;
@@ -42,13 +48,19 @@ p {
     padding-block: 1rem;
     margin-block: 0;
     margin-inline: 1rem;
+    animation-name: text-color 5s;
+    animation-iteration-count: 5;
 }
 button {
     background-color: white;
     color: black;
     border: none;
     border-radius: 0.5rem;
-    padding: 0.3rem 0.7rem;    
+    padding: 0.3rem 0.7rem;   
+    animation-name: buton-jos;
+    animation-duration: 5s;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
 }
 #buton-inchidere {
     height: 3rem;
@@ -64,6 +76,11 @@ button {
     position: absolute;
     inset-inline-end: -1.5rem;
     inset-block-start: -1.5rem;
+    animation-name: close-button;
+    animation-duration: 5s, 5s, 5s, 5s;
+    animation-iteration-count: 5;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
 }
 #ultimul-paragraf {
     border-block-end: 1px solid white;
@@ -86,6 +103,34 @@ button {
     main {
         width: 55vw;
     }
-   
 }
-
+@keyframes close-button {
+    0% {
+        animation-timing-function: ease-in-out;
+        transform: translateY(32vw) translateX(-5vh) rotate(300deg);
+        background-color: red;
+    }
+    60% {
+        animation-timing-function: linear;
+        height: 2rem;
+    }
+    100% {
+        animation-timing-function: linear;
+        transform: translateX(0)translateY(0)rotate(0deg);
+       
+    }
+}
+@keyframes buton-jos {
+    0% {
+        animation-timing-function: ease-in-out;
+        transform: rotate(0deg);
+    }
+    80% {
+        animation-timing-function: ease-in-out;
+        transform: rotate(-15deg);
+    }
+    100% {
+        animation-timing-function: linear;
+        transform: rotate(0deg);
+    }
+}
