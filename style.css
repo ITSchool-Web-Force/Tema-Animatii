@@ -1,10 +1,15 @@
 :root{
     font-size: 16px;
 }
+* {
+    margin: 0;
+}
 body {
     background-color: rgb(173, 177, 177);
 }
 main {
+    --margin: 5rem;
+
     background: radial-gradient(#42454C,#25282E);
     height: auto;
     width: 80%;
@@ -13,6 +18,11 @@ main {
     border-radius: 1rem;
     color:white;  
     overflow:scroll;
+    inset-block: auto;
+    position: sticky;
+    margin-block: var(--margin);
+    min-height: calc(100vh - 2 * var(--margin));
+    z-index: 0;
 }
 h1 {
     font-size: 2rem;
@@ -26,6 +36,7 @@ h1 {
     flex-direction: column;
     margin-inline: 1rem;
     padding-block-end: 1rem;
+    position: relative;
 }
 p {
     padding-block: 1rem;
@@ -44,21 +55,17 @@ button {
     width: 3rem;
     border-radius: 1.5rem;
     background-color: red;
-    position: absolute;
-    inset-inline-end: -2rem;
-    inset-block-start: -2rem;
     font-size: 2.5rem;
     color: white;
     font-weight: bold;
     text-align: center;
     z-index: 2;
     box-shadow: 0.1ch 0.1ch 2ch rgb(48, 47, 47);
+    position: absolute;
+    inset-inline-end: -1rem;
+    inset-block-start: -1rem;
 }
 @media (min-width: 650px) {
-    main {
-        width: 60vw;
-        overflow: visible;
-    }
     h1 {
         font-size: 3rem;
     }
@@ -71,13 +78,16 @@ button {
         padding: 0.7rem 1rem;
         color:white;
         
+        
     }
 }
 @media (min-width:1000px) {
     main {
-        height: auto;
-        width: 60vw;
-        inset-block: auto;
+        --margin: 5rem;
+        
+        margin-block: var(--margin);
+        min-height: calc(100vh - 2 * var(--margin));
+        width: 55vw;
     }
    
 }
