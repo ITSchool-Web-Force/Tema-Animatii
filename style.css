@@ -119,10 +119,12 @@ button {
     }
     60% {
         animation-timing-function: linear;
+        background: radial-gradient(rgb(179, 5, 31),rgb(216, 216, 53));
     }
     100% {
         animation-timing-function: ease-in-out;
         transform: translateX(0)translateY(0)rotate(0deg);
+        background: radial-gradient(rgb(179, 5, 31),rgb(216, 216, 53));
     }
 }
 @keyframes buton-jos {
