@@ -65,6 +65,9 @@ button {
     inset-inline-end: -1.5rem;
     inset-block-start: -1.5rem;
 }
+#ultimul-paragraf {
+    border-block-end: 1px solid white;
+}
 @media (min-width: 450px) {
     h1 {
         font-size: 3rem;
