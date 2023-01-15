@@ -1,0 +1,187 @@
+:root{
+    font-size: 16px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(173, 177, 177);
+}
+main {
+    --margin: 5rem;
+
+    background: radial-gradient(#42454C,#25282E);
+    height: auto;
+    width: 80%;
+    margin-inline: auto;
+    border-radius: 1rem;
+    color:white;  
+    inset-block: auto;
+    position: sticky;
+    margin-block: var(--margin);
+    min-height: calc(100vh - 2 * var(--margin));
+    z-index: 0;
+}
+h1 {
+    font-size: 2rem;
+    margin-block: 1rem 0rem;
+    margin-inline: 1rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border-block-end: 1px solid white;
+    transition: color 3s;
+}
+h1:hover {
+    color: green;
+    border-block-end: none;
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 1rem;
+    padding-block-end: 1rem;
+}
+p {
+    padding-block: 1rem;
+    margin-block: 0;
+    margin-inline: 1rem;
+    color: white;
+    animation-name: text-color;
+    animation-duration: 10s;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+}
+button {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.3rem 0.7rem;   
+    animation-name: buton-jos;
+    animation-duration: 10s;
+    animation-delay: 4s;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+}
+#buton-inchidere {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 1.5rem;
+    background-color: #44444B;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+    box-shadow: 0.1ch 0.1ch 2ch rgb(48, 47, 47);
+    position: absolute;
+    inset-inline-end: -1.5rem;
+    inset-block-start: -1.5rem;
+    animation-name: close-button;
+    animation-duration: 5s, 5s, 5s, 5s;
+    animation-iteration-count: 5;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+}
+#ultimul-paragraf {
+    border-block-end: 1px solid white;
+}
+
+@keyframes close-button {
+    0% {
+        animation-timing-function: linear;
+        transform: rotate(300deg);
+        background-color: rgb(77, 80, 241);
+    }
+    100% {
+        animation-timing-function: linear;
+        tranform: rotate (0deg);
+    }
+}
+
+@keyframes text-color {
+    0% {
+        animation-timing-function: ease-in;
+        color: green;
+    }
+    50% {
+        animation-timing-function: ease-in;
+        color:yellow;
+    }
+    100% {
+        animation-timing-function: ease-in-out;
+        color:red;
+    }
+}
+
+@keyframes buton-jos {
+    0% {
+        animation-timing-function: linear;
+        background-color: red;
+    }
+    100% {
+        animation-timing-function: linear;
+        background-color: violet;
+    }
+}
+
+@media (min-width: 450px) {
+    h1 {
+        font-size: 3rem;
+    }
+    button {
+        width: 8rem;
+        height: auto;
+        justify-content: flex-end;
+        align-self: flex-end;
+        background-color: #3D4450;
+        color:white;        
+    }
+}
+@media (min-width:1000px) {
+    main {
+        width: 55vw;
+    }
+}
+
+@media (min-width:1200px) {
+    @keyframes close-button {
+        0% {
+            animation-timing-function: ease-out;
+            transform: translateY(30vw) translateX(-5vh) rotate(300deg)scale(200%);
+            background: radial-gradient(rgb(179, 5, 31),rgb(216, 216, 53));
+            color:green;
+            scale: 1.3 1;       
+        }
+        60% {
+            animation-timing-function: ease-out;
+            background: radial-gradient(rgb(179, 5, 31),rgb(216, 216, 53));
+            
+        }
+        100% {
+            animation-timing-function: ease-in-out;
+            transform: translateX(0)translateY(0)rotate(0deg);
+            background: radial-gradient(rgb(179, 5, 31),rgb(216, 216, 53));
+        }
+    }
+    @keyframes buton-jos {
+        0% {
+            animation-timing-function: ease-out;
+            transform: rotate(0deg);
+        }
+        80% {
+            animation-timing-function: ease-out;
+            transform: rotate(-14deg);
+        }
+        100% {
+            animation-timing-function: ease-out;
+            transform: rotate(0deg);
+            background-color: green;
+        }
+    }
+}
