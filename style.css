@@ -92,6 +92,35 @@ button {
 #ultimul-paragraf {
     border-block-end: 1px solid white;
 }
+
+@keyframes close-button {
+    0% {
+        animation-timing-function: linear;
+        transform: rotate(300deg);
+        background-color: rgb(77, 80, 241);
+    }
+    100% {
+        animation-timing-function: linear;
+        tranform: rotate (0deg);
+    }
+}
+
+@keyframes text-color {
+    0% {
+        animation-timing-function: ease-in;
+        color: green;
+    }
+    50% {
+        animation-timing-function: ease-in;
+        color:yellow;
+    }
+    100% {
+        animation-timing-function: ease-in-out;
+        color:red;
+    }
+}
+
+
 @media (min-width: 450px) {
 h1 {
     font-size: 3rem;
@@ -102,7 +131,6 @@ button {
     justify-content: flex-end;
     align-self: flex-end;
     background-color: #3D4450;
-    padding: 0.7rem 1rem;
     color:white;        
 }
 }
@@ -144,20 +172,6 @@ button {
         animation-timing-function: ease-out;
         transform: rotate(0deg);
         background-color: green;
-    }
-}
-@keyframes text-color {
-    0% {
-        animation-timing-function: ease-in;
-        color: green;
-    }
-    50% {
-        animation-timing-function: ease-in;
-        color:yellow;
-    }
-    100% {
-        animation-timing-function: ease-in-out;
-        color:red;
     }
 }
 }
