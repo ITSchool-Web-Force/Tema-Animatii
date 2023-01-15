@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Seymour+One&display=swap");
+
+:root {
+  --white: #eee;
+  --h1-load-delay: 300ms;
+  --h1-load-time: 500ms;
+}
+
+html {
+  background: rgb(211, 209, 209);
+}
+
+header {
+  padding-top: 2.9rem;
+  color: var(--white);
+  font-family: "Seymour One", sans-serif;
+  padding-inline-start: 1.8rem;
+  animation: head 300ms ease-in;
+}
+
+article {
+  color: var(--white);
+  border-block: 0.12rem solid;
+  position: fixed;
+  font-size: 1rem;
+  height: 60%;
+  width: 93%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: scroll;
+}
+
+article::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animations */
+
+section {
+  position: fixed;
+  background: radial-gradient(rgb(83, 85, 90), rgb(41, 45, 54));
+  height: 68vh;
+  width: 55%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.32rem;
+  animation: section 4s;
+}
+
+p {
+  animation: article-load 300ms ease-in 900ms;
+  animation-fill-mode: forwards;
+  transform: translateY(-1.25rem);
+  opacity: 0;
+}
+
+.p_one {
+  animation: p_one 800ms ease-in 1.3s;
+  animation-fill-mode: forwards;
+  transform: translateY(-1.25rem);
+  color: rgb(188, 151, 41);
+}
+
+.p_two {
+  animation: p_two 1s ease-in 1.6s;
+  animation-fill-mode: forwards;
+  transform: translateX(-1.25rem);
+  color: rgb(81, 0, 255);
+}
+
+.p_three {
+  animation: p_three 1.4s ease-in 2s;
+  animation-fill-mode: forwards;
+  transform: translateX(-1.25rem);
+  color: rgb(255, 51, 0);
+}
+
+h1 {
+  animation: text-scale var(--h1-load-time) ease-in var(--h1-load-delay);
+  animation-fill-mode: forwards;
+  transform: scale(0);
+}
+
+.button {
+  position: fixed;
+  display: block;
+  right: 1.56rem;
+  top: 85%;
+  background: #3d4450;
+  color: #eee;
+  padding: 0.62rem 1.68rem;
+  border-radius: 0.5rem;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.61, 0.08, 0.99, 0.21);
+}
+
+.button:hover {
+  background: rgb(121, 85, 220);
+  transform: scale(1.2) rotate(360deg);
+}
+
+#close-modal {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  transform: translate(50%, -50%);
+  background: #44444b;
+  box-shadow: 0rem 0.18rem 2rem #000000;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  padding: 1.4rem;
+  color: var(--white);
+  font-weight: 500;
+  line-height: 0.62rem;
+  transition: opacity 300ms ease-in-out;
+}
+
+#close-modal:hover {
+  background: rgb(96, 220, 85);
+  opacity: 0.4;
+}
+
+@keyframes section {
+  0% {
+    transform: translateY(-100%);
+    transition-timing-function: linear;
+  }
+  50% {
+    transform: translateX(-100%);
+    transition-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translateX(0%);
+    transition-timing-function: ease-in-out;
+  }
+}
+
+@keyframes text-scale {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes head {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes article-load {
+  0% {
+    transform: translateX(-1.25rem);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes p_one {
+  0% {
+    transform: translateY(-1.25rem);
+    color: rgb(188, 151, 41);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    color: #eee;
+  }
+}
+
+@keyframes p_two {
+  0% {
+    transform: translateX(-1.25rem);
+    color: rgb(81, 0, 255);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    color: #eee;
+  }
+}
+
+@keyframes p_three {
+  0% {
+    transform: translateY(1.25rem);
+    color: rgb(255, 51, 0);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    color: #eee;
+  }
+}
+
+@media (width < 576px) {
+  html {
+    background: rgb(211, 209, 209);
+  }
+
+  section {
+    width: 18.12rem;
+  }
+
+  header {
+    padding-top: 1.25rem;
+  }
+
+  .button-mobil {
+    top: 84%;
+    border-radius: 0.5rem;
+    width: 6rem;
+    padding: 0.18rem 7.5rem;
+    background-color: #eee;
+  }
+  .button-mobil {
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.62rem;
+  }
+
+  #close-modal {
+    font-weight: 400;
+    font-size: 0.93rem;
+    padding: 0.62rem;
+  }
+
+  article {
+    width: 80%;
+  }
+}
