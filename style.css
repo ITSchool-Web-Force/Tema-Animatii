@@ -31,10 +31,9 @@ h1 {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     border-block-end: 1px solid white;
-    transition: transform 5s, color 3s;
+    transition: color 3s;
 }
 h1:hover {
-    transform: translate(3rem);
     color: green;
     border-block-end: none;
 }
@@ -120,6 +119,16 @@ button {
     }
 }
 
+@keyframes buton-jos {
+    0% {
+        animation-timing-function: linear;
+        background-color: red;
+    }
+    100% {
+        animation-timing-function: linear;
+        background-color: violet;
+    }
+}
 
 @media (min-width: 450px) {
 h1 {
@@ -139,39 +148,40 @@ button {
         width: 55vw;
     }
 }
+
 @media (min-width:1200px) {
-@keyframes close-button {
-    0% {
-        animation-timing-function: ease-out;
-        transform: translateY(30vw) translateX(-5vh) rotate(300deg)scale(200%);
-        background: radial-gradient(rgb(179, 5, 31),rgb(216, 216, 53));
-        color:green;
-        scale: 1.3 1;       
-    }
-    60% {
-        animation-timing-function: ease-out;
-        background: radial-gradient(rgb(179, 5, 31),rgb(216, 216, 53));
-        
-    }
-    100% {
-        animation-timing-function: ease-in-out;
-        transform: translateX(0)translateY(0)rotate(0deg);
-        background: radial-gradient(rgb(179, 5, 31),rgb(216, 216, 53));
-    }
+    @keyframes close-button {
+        0% {
+            animation-timing-function: ease-out;
+            transform: translateY(30vw) translateX(-5vh) rotate(300deg)scale(200%);
+            background: radial-gradient(rgb(179, 5, 31),rgb(216, 216, 53));
+            color:green;
+            scale: 1.3 1;       
+        }
+        60% {
+            animation-timing-function: ease-out;
+            background: radial-gradient(rgb(179, 5, 31),rgb(216, 216, 53));
+            
+        }
+        100% {
+            animation-timing-function: ease-in-out;
+            transform: translateX(0)translateY(0)rotate(0deg);
+            background: radial-gradient(rgb(179, 5, 31),rgb(216, 216, 53));
+        }
 }
-@keyframes buton-jos {
-    0% {
-        animation-timing-function: ease-out;
-        transform: rotate(0deg);
-    }
-    80% {
-        animation-timing-function: ease-out;
-        transform: rotate(-14deg);
-    }
-    100% {
-        animation-timing-function: ease-out;
-        transform: rotate(0deg);
-        background-color: green;
-    }
+    @keyframes buton-jos {
+        0% {
+            animation-timing-function: ease-out;
+            transform: rotate(0deg);
+        }
+        80% {
+            animation-timing-function: ease-out;
+            transform: rotate(-14deg);
+        }
+        100% {
+            animation-timing-function: ease-out;
+            transform: rotate(0deg);
+            background-color: green;
+        }
 }
 }
