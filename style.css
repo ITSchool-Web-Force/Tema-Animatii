@@ -131,17 +131,17 @@ button {
 }
 
 @media (min-width: 450px) {
-h1 {
-    font-size: 3rem;
-}
-button {
-    width: 8rem;
-    height: auto;
-    justify-content: flex-end;
-    align-self: flex-end;
-    background-color: #3D4450;
-    color:white;        
-}
+    h1 {
+        font-size: 3rem;
+    }
+    button {
+        width: 8rem;
+        height: auto;
+        justify-content: flex-end;
+        align-self: flex-end;
+        background-color: #3D4450;
+        color:white;        
+    }
 }
 @media (min-width:1000px) {
     main {
@@ -168,7 +168,7 @@ button {
             transform: translateX(0)translateY(0)rotate(0deg);
             background: radial-gradient(rgb(179, 5, 31),rgb(216, 216, 53));
         }
-}
+    }
     @keyframes buton-jos {
         0% {
             animation-timing-function: ease-out;
@@ -183,5 +183,5 @@ button {
             transform: rotate(0deg);
             background-color: green;
         }
-}
+    }
 }
