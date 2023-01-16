@@ -22,9 +22,6 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-body:active {
-  background: red;
-}
 .modal {
   background: radial-gradient(50% 50% at 50% 50%, #42454c 0%, #25282e 100%);
   color: #eaeaea;
@@ -37,7 +34,6 @@ body:active {
   border-radius: 1rem;
   animation: modal-anim 0.5s ease-in-out;
 }
-
 .close {
   font-size: 1.5rem;
   background: #44444b;
