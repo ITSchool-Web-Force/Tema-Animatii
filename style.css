@@ -57,8 +57,7 @@ body {
   transform: scale(1.2) rotate(180deg);
 }
 .p-wrap {
-  border-block-end: 1px solid #dbdbdb;
-  border-block-start: 1px solid #dbdbdb;
+  border-block: 1px solid #dbdbdb;
 }
 
 .modal-button {
@@ -80,7 +79,6 @@ body {
 }
 @media (max-width: 55rem) {
   body {
-    padding-inline-start: 2rem;
-    padding-inline-end: 3rem;
+    padding-inline: 3rem;
   }
 }
