@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Jua&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #e5e5e5;
+}
+.modal {
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(50% 50% at 50% 50%, #42454c 0%, #25282e 100%);
+  border-radius: 0.5rem;
+  width: 68rem;
+  padding: 2rem;
+  margin: 11rem auto;
+  position: relative;
+  animation: entrance 1s ease-in-out;
+}
+@keyframes entrance {
+  0% {
+    transform: scale(300%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
+.modal-text:hover {
+  animation: color-change 5s normal;
+}
+@keyframes color-change {
+  0% {
+    color: #19dcea;
+  }
+  25% {
+    color: #b22cff;
+  }
+  50% {
+    color: #ea2222;
+  }
+  75% {
+    color: #f5be10;
+  }
+  100% {
+    color: #3bd80d;
+  }
+}
+.close-button {
+  color: #fff;
+  font-size: 3rem;
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+
+  background: #44444b;
+  box-shadow: 0px 3px 32px #000000;
+  border-radius: 5rem;
+  border: none;
+  padding: 0.1rem 1.2rem;
+  cursor: pointer;
+  position: absolute;
+  right: -2rem;
+  top: -2.2rem;
+}
+h1 {
+  font-size: 4.88rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  color: #fff;
+}
+h1:hover {
+  animation: vanish 1s linear both;
+}
+@keyframes vanish {
+  0% {
+    transform: translateZ(0);
+  }
+  100% {
+    letter-spacing: 0.5rem;
+    transform: scale(200%);
+    filter: blur(1rem) opacity(0%);
+  }
+}
+.modal-text {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  padding: 1rem 0;
+  border-block: 1px solid #dbdbdb;
+  margin-block: 1rem;
+}
+p {
+  margin-bottom: 1rem;
+}
+.modal-text p:last-child {
+  margin-bottom: 0;
+}
+.accept-button {
+  display: inline-flex;
+  align-self: flex-end;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  background: #3d4450;
+  border-radius: 8px;
+  border: none;
+
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+.accept-button:hover,
+.close-button:hover {
+  animation: scale 0.5s ease-in-out;
+}
+@keyframes scale {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(300%);
+  }
+}
